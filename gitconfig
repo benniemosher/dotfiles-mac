@@ -1,0 +1,17 @@
+[user]
+	name = Bennie Mosher
+	email = benniemosher@gmail.com
+	signingkey = 5BEBD3D0
+[alias]
+	s = status
+	co = checkout
+[credential]
+	helper = cache --timeout=3600
+[core]
+	editor = vim
+[commit]
+	gpgsign = true
+[push]
+	default = current
+[pull]
+	default = current
