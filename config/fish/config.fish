@@ -1,6 +1,8 @@
 # Install fundle if not installed
 if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
 
+bass source ~/.nvm/nvm.sh --no-use ';' nvm use v6.9.4
+
 if test -f ~/.gnupg/.gpg-agent-info -a -n "(pgrep gpg-agent)"; then
   . ~/.gnupg/gpg-agent-info
   export GPG_AGENT_INFO
@@ -10,7 +12,9 @@ else
   eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
 end
 
-# set -g -x PATH /usr/local/opt/gnupg/libexec/gpgbin $PATH
+set -g -x PATH /Users/bam/Library/Android/sdk/platform-tools $PATH
+set -g -x PATH /Users/bam/Library/Android/sdk/tools $PATH
+set -g -x ANDROID_HOME /Users/bam/Library/Android/sdk
 
 # print the welcome banner
 # fish_logo
@@ -79,4 +83,5 @@ set __color_virtualfish              brblue $colorfg --bold
 
 # plugins
 fundle plugin 'oh-my-fish/theme-bobthefish'
+fundle plugin 'edc/bass'
 fundle init

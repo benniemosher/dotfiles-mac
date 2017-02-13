@@ -1,9 +1,11 @@
 "*":
+  "atom-clock":
+    dateFormat: "MM/DD HH:mm:ss"
+    showClockIcon: true
   core:
-    excludeVcsIgnoredPaths: false
+    audioBeep: false
     projectHome: "/Users/bam/Code"
     telemetryConsent: "limited"
-    useCustomTitleBar: true
   editor:
     backUpBeforeSaving: true
     scrollPastEnd: true
