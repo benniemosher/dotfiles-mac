@@ -16,6 +16,8 @@ set -g -x PATH /Users/bam/Library/Android/sdk/platform-tools $PATH
 set -g -x PATH /Users/bam/Library/Android/sdk/tools $PATH
 set -g -x ANDROID_HOME /Users/bam/Library/Android/sdk
 
+set -gx PATH $PATH `yarn global bin`
+
 # print the welcome banner
 # fish_logo
 fortune | fishthink | lolcat

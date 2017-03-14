@@ -4,18 +4,36 @@
     showClockIcon: true
   core:
     audioBeep: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "editorconfig"
+    ]
     projectHome: "/Users/bam/Code"
     telemetryConsent: "limited"
+    useCustomTitleBar: true
   editor:
     backUpBeforeSaving: true
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
-    tabLength: 4
   "exception-reporting":
     userId: "7fa8d7b6-9752-ac94-c939-3bf8cbec37e7"
   "git-diff":
     showIconsInEditorGutter: true
+  "tabs-to-spaces":
+    onSave: "untabify"
   welcome:
     showOnStartup: false
