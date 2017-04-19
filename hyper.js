@@ -5,7 +5,7 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 11,
+    fontSize: 12,
 
     // font family with optional fallbacks
     fontFamily: '"DroidSansMonoForPowerline Nerd Font", Monaco, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -107,11 +107,11 @@ module.exports = {
   plugins: [
     'hyperline',
     'hyper-atom-dark-transparent',
-    'hyperterm-mactabs',
+    'hyperterm-mactabs'
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
   localPlugins: []
-};
+}
