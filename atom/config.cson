@@ -1,39 +1,38 @@
 "*":
-  "atom-clock":
-    dateFormat: "MM/DD HH:mm:ss"
-    showClockIcon: true
+  "atom-material-ui":
+    colors:
+      abaseColor: "#cddc39"
+      accentColor: "#737f10"
+      genAccent: true
+      paintCursor: true
+      predefinedColor: "Lime"
+    fonts:
+      fontSize: 14
+    tabs:
+      compactTabs: true
+      noTabMinWidth: true
+    treeView:
+      compactList: true
+    ui:
+      panelContrast: true
+      panelShadows: true
   core:
-    audioBeep: false
-    customFileTypes:
-      "source.ini": [
-        ".buckconfig"
-        ".hgrc"
-        ".flowconfig"
-      ]
-      "source.json": [
-        ".arcconfig"
-        "BUCK.autodeps"
-      ]
-      "source.python": [
-        "BUCK"
-      ]
-    disabledPackages: [
-      "editorconfig"
-    ]
-    projectHome: "/Users/bam/Code"
+    closeDeletedFileTabs: true
     telemetryConsent: "limited"
-    useCustomTitleBar: true
+    themes: [
+      "atom-material-ui"
+      "nova-atom-syntax"
+    ]
+    titleBar: "custom"
   editor:
-    backUpBeforeSaving: true
-    scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-    softWrap: true
   "exception-reporting":
-    userId: "7fa8d7b6-9752-ac94-c939-3bf8cbec37e7"
-  "git-diff":
-    showIconsInEditorGutter: true
-  "tabs-to-spaces":
-    onSave: "untabify"
+    userId: "279dd049-5598-4e8d-a32b-4d4e938fe394"
+  "highlight-selected": {}
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
   welcome:
     showOnStartup: false
