@@ -16,7 +16,10 @@ set -g -x PATH /Users/bam/Library/Android/sdk/platform-tools $PATH
 set -g -x PATH /Users/bam/Library/Android/sdk/tools $PATH
 set -g -x ANDROID_HOME /Users/bam/Library/Android/sdk
 
-set -gx PATH $PATH `yarn global bin`
+# set -gx PATH $PATH `yarn global bin`
+
+source /usr/local/share/chruby/chruby.fish
+source /usr/local/share/chruby/auto.fish
 
 # print the welcome banner
 # fish_logo
