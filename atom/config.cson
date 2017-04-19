@@ -21,7 +21,7 @@
     telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
-      "nova-atom-syntax"
+      "atom-material-syntax"
     ]
     titleBar: "custom"
   editor:
