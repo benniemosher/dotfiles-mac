@@ -108,6 +108,7 @@ module.exports = {
     'hyperline',
     'hyper-atom-dark-transparent',
     'hyperterm-mactabs',
+    'nova-hyperterm'
   ],
 
   // in development, you can create a directory under
