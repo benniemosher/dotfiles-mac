@@ -90,3 +90,5 @@ set __color_virtualfish              brblue $colorfg --bold
 fundle plugin 'oh-my-fish/theme-bobthefish'
 fundle plugin 'edc/bass'
 fundle init
+set -g fish_user_paths "/usr/local/opt/postgresql@9.4/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
