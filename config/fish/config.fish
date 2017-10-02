@@ -1,7 +1,7 @@
 # Install fundle if not installed
 if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
 
-bass source ~/.nvm/nvm.sh --no-use ';' nvm use v6.9.4
+# bass source ~/.nvm/nvm.sh --no-use ';' nvm use v6.9.4
 
 if test -f ~/.gnupg/.gpg-agent-info -a -n "(pgrep gpg-agent)"; then
   . ~/.gnupg/gpg-agent-info
@@ -12,9 +12,9 @@ else
   eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
 end
 
-set -g -x PATH /Users/bam/Library/Android/sdk/platform-tools $PATH
-set -g -x PATH /Users/bam/Library/Android/sdk/tools $PATH
-set -g -x ANDROID_HOME /Users/bam/Library/Android/sdk
+set -g -x PATH ~/Library/Android/sdk/platform-tools $PATH
+set -g -x PATH ~/Library/Android/sdk/tools $PATH
+set -g -x ANDROID_HOME ~/Library/Android/sdk
 
 # set -gx PATH $PATH `yarn global bin`
 
@@ -59,7 +59,7 @@ set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
 
 # Sets the powerline color scheme
-# set -g theme_color_scheme base16-dark
+# set -g theme_color_scheme solarized
 set -g theme_color_scheme user
 set -l colorfg abb2c0
 set -l dircolor 3E4451
@@ -69,26 +69,28 @@ set __color_initial_segment_jobs     white blue --bold
 
 set __color_path                     $dircolor white
 set __color_path_basename            $dircolor white --bold
-set __color_path_nowrite             magenta $colorfg
-set __color_path_nowrite_basename    magenta $colorfg --bold
+set __color_path_nowrite             d682f0 $colorfg
+set __color_path_nowrite_basename    d682f0 $colorfg --bold
 
-set __color_repo                     green white
-set __color_repo_work_tree           green white --bold
-set __color_repo_dirty               red white
-set __color_repo_staged              yellow white
+set __color_repo                     97C279 white
+set __color_repo_work_tree           97C279 white --bold
+set __color_repo_dirty               be5046 white
+set __color_repo_staged              e2c08d white
 
-set __color_vi_mode_default          brblue $colorfg --bold
-set __color_vi_mode_insert           brgreen $colorfg --bold
-set __color_vi_mode_visual           bryellow $colorfg --bold
+set __color_vi_mode_default          65b6f8 $colorfg --bold
+set __color_vi_mode_insert           abdc89 $colorfg --bold
+set __color_vi_mode_visual           f2ce97 $colorfg --bold
 
-set __color_vagrant                  brcyan $colorfg
+set __color_vagrant                  66d7e6 $colorfg
 set __color_username                 white black
-set __color_rvm                      brmagenta white --bold
-set __color_virtualfish              brblue $colorfg --bold
+set __color_rvm                      97C279 white --bold
+set __color_virtualfish              65b6f8 $colorfg --bold
 
 # plugins
 fundle plugin 'oh-my-fish/theme-bobthefish'
-fundle plugin 'edc/bass'
+# fundle plugin 'edc/bass'
 fundle init
-set -g fish_user_paths "/usr/local/opt/postgresql@9.4/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/postgresql@9.4/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
