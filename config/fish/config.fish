@@ -63,27 +63,27 @@ set __fish_git_prompt_char_upstream_behind '-'
 set -g theme_color_scheme user
 set -l colorfg abb2c0
 set -l dircolor 3E4451
-set __color_initial_segment_exit     white red --bold
-set __color_initial_segment_su       white green --bold
-set __color_initial_segment_jobs     white blue --bold
+set __color_initial_segment_exit     ffffff DF6B75 --bold
+set __color_initial_segment_su       ffffff 97C279 --bold
+set __color_initial_segment_jobs     ffffff 61AFEF --bold
 
-set __color_path                     $dircolor white
-set __color_path_basename            $dircolor white --bold
+set __color_path                     $dircolor ffffff
+set __color_path_basename            $dircolor ffffff --bold
 set __color_path_nowrite             d682f0 $colorfg
 set __color_path_nowrite_basename    d682f0 $colorfg --bold
 
-set __color_repo                     97C279 white
-set __color_repo_work_tree           97C279 white --bold
-set __color_repo_dirty               be5046 white
-set __color_repo_staged              e2c08d white
+set __color_repo                     97C279 ffffff
+set __color_repo_work_tree           97C279 ffffff --bold
+set __color_repo_dirty               be5046 ffffff
+set __color_repo_staged              e2c08d ffffff
 
 set __color_vi_mode_default          65b6f8 $colorfg --bold
 set __color_vi_mode_insert           abdc89 $colorfg --bold
 set __color_vi_mode_visual           f2ce97 $colorfg --bold
 
 set __color_vagrant                  66d7e6 $colorfg
-set __color_username                 white black
-set __color_rvm                      97C279 white --bold
+set __color_username                 ffffff 000000
+set __color_rvm                      97C279 ffffff --bold
 set __color_virtualfish              65b6f8 $colorfg --bold
 
 # plugins
