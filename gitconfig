@@ -10,7 +10,7 @@
 	helper = cache --timeout=3600
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 [commit]
 	gpgsign = true
 [push]
