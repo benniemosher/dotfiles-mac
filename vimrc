@@ -31,6 +31,12 @@ map <Leader>a :call RunAllSpecs()<CR>
 " Run rspecs with Dispatch
 let g:rspec_command = "Dispatch rspec {spec}"
 
+" Ignore backups and swap files
+set nobackup
+set nowritebackup
+set noswapfile
+set history=50
+
 call plug#begin()
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tpope/vim-surround'
