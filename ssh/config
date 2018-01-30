@@ -1,4 +1,16 @@
 Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+# nutrien account
+Host github.com-nutrien
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_nutrien
+
+# personal account
+Host github.com-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
