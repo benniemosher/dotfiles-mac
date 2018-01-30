@@ -12,18 +12,18 @@ else
   eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
 end
 
-set -g -x PATH ~/Library/Android/sdk/platform-tools $PATH
-set -g -x PATH ~/Library/Android/sdk/tools $PATH
-set -g -x ANDROID_HOME ~/Library/Android/sdk
+# set -g -x PATH ~/Library/Android/sdk/platform-tools $PATH
+# set -g -x PATH ~/Library/Android/sdk/tools $PATH
+# set -g -x ANDROID_HOME ~/Library/Android/sdk
 
 # set -gx PATH $PATH `yarn global bin`
 
-source /usr/local/share/chruby/chruby.fish
-source /usr/local/share/chruby/auto.fish
+# source /usr/local/share/chruby/chruby.fish
+# source /usr/local/share/chruby/auto.fish
 
 # print the welcome banner
 # fish_logo
-fortune | fishthink | lolcat
+fortune | cowsay -f R2-D2 | lolcat
 
 #
 # std prompt config
@@ -91,6 +91,6 @@ fundle plugin 'oh-my-fish/theme-bobthefish'
 # fundle plugin 'edc/bass'
 fundle init
 # set -g fish_user_paths "/usr/local/opt/postgresql@9.4/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
