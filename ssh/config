@@ -3,14 +3,12 @@ Host *
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
 
-# nutrien account
-Host github.com-nutrien
+Host personal
   HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_rsa_nutrien
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_rsa_personal
 
-# personal account
-Host github.com-personal
+Host work
   HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_rsa
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_rsa_work

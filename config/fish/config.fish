@@ -1,7 +1,7 @@
 # Install fundle if not installed
 if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
 
-# bass source ~/.nvm/nvm.sh --no-use ';' nvm use v6.9.4
+bass source ~/.nvm/nvm.sh --no-use ';' nvm use v7.0.0
 
 if test -f ~/.gnupg/.gpg-agent-info -a -n "(pgrep gpg-agent)"; then
   . ~/.gnupg/gpg-agent-info
@@ -18,8 +18,9 @@ end
 
 # set -gx PATH $PATH `yarn global bin`
 
-# source /usr/local/share/chruby/chruby.fish
-# source /usr/local/share/chruby/auto.fish
+source /usr/local/share/chruby/chruby.fish
+source /usr/local/share/chruby/auto.fish
+chruby 2.3.3
 
 # print the welcome banner
 # fish_logo
@@ -72,8 +73,8 @@ set __color_path_basename            $dircolor ffffff --bold
 set __color_path_nowrite             d682f0 $colorfg
 set __color_path_nowrite_basename    d682f0 $colorfg --bold
 
-set __color_repo                     97C279 ffffff
-set __color_repo_work_tree           97C279 ffffff --bold
+set __color_repo                     61AFEF ffffff
+set __color_repo_work_tree           61AFEF ffffff --bold
 set __color_repo_dirty               be5046 ffffff
 set __color_repo_staged              e2c08d ffffff
 
@@ -83,14 +84,10 @@ set __color_vi_mode_visual           f2ce97 $colorfg --bold
 
 set __color_vagrant                  66d7e6 $colorfg
 set __color_username                 ffffff 000000
-set __color_rvm                      97C279 ffffff --bold
+set __color_rvm                      61AFEF ffffff --bold
 set __color_virtualfish              65b6f8 $colorfg --bold
 
 # plugins
 fundle plugin 'oh-my-fish/theme-bobthefish'
-# fundle plugin 'edc/bass'
+fundle plugin 'edc/bass'
 fundle init
-# set -g fish_user_paths "/usr/local/opt/postgresql@9.4/bin" $fish_user_paths
-# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-# set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
-# set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
