@@ -1,7 +1,7 @@
 # Install fundle if not installed
 if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
 
-bass source ~/.nvm/nvm.sh --no-use ';' nvm use v7.0.0
+bass source ~/.nvm/nvm.sh --no-use ';' nvm use v8.9.4
 
 if test -f ~/.gnupg/.gpg-agent-info -a -n "(pgrep gpg-agent)"; then
   . ~/.gnupg/gpg-agent-info
@@ -16,11 +16,13 @@ end
 # set -g -x PATH ~/Library/Android/sdk/tools $PATH
 # set -g -x ANDROID_HOME ~/Library/Android/sdk
 
+set -g -x PATH (brew --prefix qt@5.5)/bin $PATH
+
 # set -gx PATH $PATH `yarn global bin`
 
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
-chruby 2.3.3
+chruby 2.5.0
 
 # print the welcome banner
 # fish_logo
@@ -73,8 +75,8 @@ set __color_path_basename            $dircolor ffffff --bold
 set __color_path_nowrite             d682f0 $colorfg
 set __color_path_nowrite_basename    d682f0 $colorfg --bold
 
-set __color_repo                     61AFEF ffffff
-set __color_repo_work_tree           61AFEF ffffff --bold
+set __color_repo                     blue ffffff
+set __color_repo_work_tree           blue ffffff --bold
 set __color_repo_dirty               be5046 ffffff
 set __color_repo_staged              e2c08d ffffff
 
@@ -91,3 +93,4 @@ set __color_virtualfish              65b6f8 $colorfg --bold
 fundle plugin 'oh-my-fish/theme-bobthefish'
 fundle plugin 'edc/bass'
 fundle init
+set -g fish_user_paths "/usr/local/opt/libxslt/bin" $fish_user_paths
