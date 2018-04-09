@@ -1,14 +1,16 @@
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
+# benniemosher account
+Host github.com-benniemosher
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_benniemosher
 
-Host personal
-  HostName github.com
-  PreferredAuthentications publickey
-  IdentityFile ~/.ssh/id_rsa_personal
+Host bitbucket.com
+	HostName bitbucket.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_benniemosher
 
-Host work
-  HostName github.com
-  PreferredAuthentications publickey
-  IdentityFile ~/.ssh/id_rsa_work
+# bam-nutrien account
+Host github.com-bam-nutrien
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_bam-nutrien
