@@ -20,7 +20,7 @@ end
 
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
-chruby 2.3.3
+chruby 2.5.0
 
 # print the welcome banner
 # fish_logo
@@ -91,3 +91,10 @@ set __color_virtualfish              65b6f8 $colorfg --bold
 fundle plugin 'oh-my-fish/theme-bobthefish'
 fundle plugin 'edc/bass'
 fundle init
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/bam/.nvm/versions/node/v10.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/bam/.nvm/versions/node/v10.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/bam/.nvm/versions/node/v10.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/bam/.nvm/versions/node/v10.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
