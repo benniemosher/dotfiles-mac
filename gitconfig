@@ -1,7 +1,7 @@
 [user]
 	name = Bennie Mosher
-	email = benniemosher@gmail.com
-	signingkey = 57CB35455BEBD3D0
+	email = bennie.mosher@cpsagu.com
+	signingkey = 6D1B03A41016E753
 [alias]
 	s = status
 	co = checkout

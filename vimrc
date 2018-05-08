@@ -37,6 +37,10 @@ set nowritebackup
 set noswapfile
 set history=50
 
+colorscheme one-dark
+set background=dark
+let g:airline_theme='one'
+
 call plug#begin()
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tpope/vim-surround'
@@ -46,4 +50,6 @@ call plug#begin()
   Plug 'tpope/vim-dispatch'
   Plug 'thoughtbot/vim-rspec'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'flazz/vim-colorschemes'
+  Plug 'rakr/vim-one'
 call plug#end()
