@@ -1,16 +1,4 @@
-# benniemosher account
-Host github.com-benniemosher
-	HostName github.com
-	User git
-	IdentityFile ~/.ssh/id_rsa_benniemosher
-
-Host bitbucket.com
-	HostName bitbucket.com
-	User git
-	IdentityFile ~/.ssh/id_rsa_benniemosher
-
-# bam-nutrien account
-Host github.com-bam-nutrien
-	HostName github.com
-	User git
-	IdentityFile ~/.ssh/id_rsa_bam-nutrien
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
