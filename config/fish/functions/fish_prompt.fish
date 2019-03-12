@@ -1,6 +1,6 @@
 function fish_prompt
-	printf '%s%s%s \a%s%s%s' "$__fish_prompt_color_user" (whoami) (set_color normal) \
-		(set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+	printf '%s%s%s \a%s%s%s' (whoami) \
+		(prompt_pwd)
 	__fish_git_prompt ' (%s)'
-	printf ' %s$%s ' "$__fish_prompt_color_carat" (set_color normal)
+	printf ' %s$%s '
 end
