@@ -6,6 +6,7 @@ To Install:
 
 ```
 cd ~
+curl https://raw.githubusercontent.com/passcod/nvm-fish-wrapper/master/nvm.fish --output ~/Code/dotfiles/config/fish/nvm-wrapper/nvm.fish
 rcup -v -x README.md -x .gitignore -d ~/Code/dotfiles
 ```
 

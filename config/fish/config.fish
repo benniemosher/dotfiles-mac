@@ -15,7 +15,15 @@ else
     eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
 end
 
+<<<<<<< Updated upstream
 bass source ~/.nvm/nvm.sh --no-use ';' nvm use --delete-prefix $NODE_VERSION
+=======
+source ~/.config/fish/local.config.fish
+>>>>>>> Stashed changes
+
+source ~/.config/fish/nvm-wrapper/nvm.fish
+# nvm use $NODE_VERSION
+nvm use --delete-prefix v$NODE_VERSION --silent
 
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
@@ -98,5 +106,4 @@ set -g theem_color_scheme dracula
 
 # plugins
 fundle plugin 'oh-my-fish/theme-bobthefish'
-fundle plugin 'edc/bass'
 fundle init

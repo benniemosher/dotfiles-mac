@@ -4,5 +4,9 @@ config/fish/local.config.fish
 aws/change_mfa.sh
 aws/config
 
+<<<<<<< Updated upstream
 colors
 vim/colors/dracula.vim
+=======
+config/fish/nvm-wrapper/
+>>>>>>> Stashed changes
