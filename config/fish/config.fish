@@ -3,6 +3,8 @@ if not functions -q fundle
     eval (curl -sfL https://git.io/fundle-install)
 end
 
+source ~/.config/fish/local.config.fish
+
 if test -f ~/.gnupg/.gpg-agent-info -a -n "(pgrep gpg-agent)"
     then
     . ~/.gnupg/gpg-agent-info
@@ -13,13 +15,11 @@ else
     eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
 end
 
-bass source ~/.nvm/nvm.sh --no-use ';' nvm use --delete-prefix v8.15.0
-
-source ~/.config/fish/local.config.fish
+bass source ~/.nvm/nvm.sh --no-use ';' nvm use --delete-prefix $NODE_VERSION
 
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
-chruby 2.6.1
+chruby $RUBY_VERSION
 
 # print the welcome banner
 # fish_logo
@@ -35,27 +35,27 @@ set -g theme_display_git_master_branch yes
 #
 # std prompt config
 #
-set __fish_prompt_color_carat (set_color -o blue)
-set __fish_prompt_color_user (set_color -o blue)
+# set __fish_prompt_color_carat (set_color -o blue)
+# set __fish_prompt_color_user (set_color -o blue)
 
 #
 # git prompt config
 #
-set normal (set_color normal)
-set magenta (set_color magenta)
-set yellow (set_color yellow)
-set green (set_color green)
-set red (set_color red)
-set gray (set_color -o black)
+# set normal (set_color normal)
+# set magenta (set_color magenta)
+# set yellow (set_color yellow)
+# set green (set_color green)
+# set red (set_color red)
+# set gray (set_color -o black)
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showupstream 'yes'
-set __fish_git_prompt_color_branch yellow
-set __fish_git_prompt_color_upstream_ahead green
-set __fish_git_prompt_color_upstream_behind red
+# set __fish_git_prompt_color_branch yellow
+# set __fish_git_prompt_color_upstream_ahead green
+# set __fish_git_prompt_color_upstream_behind red
 
 # Status Chars
 set __fish_git_prompt_char_dirtystate '⚡'
@@ -66,8 +66,9 @@ set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
 
 # Sets the powerline color scheme
+set -g theem_color_scheme dracula
 # set -g theme_color_scheme terminal-dark
-set -g theme_color_scheme base16-dark
+# set -g theme_color_scheme base16-dark
 # set -g theme_color_scheme solarized
 # set -g theme_color_scheme user
 # set -l colorfg abb2c0
@@ -99,12 +100,3 @@ set -g theme_color_scheme base16-dark
 fundle plugin 'oh-my-fish/theme-bobthefish'
 fundle plugin 'edc/bass'
 fundle init
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/bam/.nvm/versions/node/v10.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]
-and . /Users/bam/.nvm/versions/node/v10.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/bam/.nvm/versions/node/v10.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]
-and . /Users/bam/.nvm/versions/node/v10.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish

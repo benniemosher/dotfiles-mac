@@ -54,13 +54,11 @@ if (empty($TMUX))
   endif
 endif
 
-" colorscheme monokai
+let g:one_allow_italics = 1
+let g:airline_theme='dracula'
+color dracula
 syntax on
 filetype plugin indent on
-let g:airline_theme='one'
-colorscheme one
-set background=dark
-let g:one_allow_italics = 1
 
 set guifont=DroidSansMono\ Nerd\ Font:h13
 
@@ -76,7 +74,6 @@ call plug#begin()
   Plug 'tpope/vim-dispatch'
   Plug 'thoughtbot/vim-rspec'
   Plug 'editorconfig/editorconfig-vim'
-  Plug 'flazz/vim-colorschemes'
-  Plug 'rakr/vim-one'
   Plug 'hashivim/vim-terraform'
+  Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
