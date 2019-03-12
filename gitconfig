@@ -1,7 +1,7 @@
 [user]
 	name = Bennie Mosher
-	email = bennie.mosher@cpsagu.com
-	signingkey = 6D1B03A41016E753
+	email = bennie.mosher@nutrien.com
+	signingkey = 21B7665760F5CAD38ED3E864AD538735446D633C
 [alias]
 	s = status
 	co = checkout
@@ -11,6 +11,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	ignorecase = false
 [commit]
 	gpgsign = true
 [push]
