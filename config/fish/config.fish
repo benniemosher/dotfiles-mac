@@ -3,6 +3,10 @@ if not functions -q fundle
     eval (curl -sfL https://git.io/fundle-install)
 end
 
+# plugins
+fundle plugin 'oh-my-fish/theme-bobthefish'
+fundle init
+
 # Import local fish config (mostly used for local env vars)
 source ~/.config/fish/local.config.fish
 
@@ -54,6 +58,3 @@ set __fish_git_prompt_char_upstream_behind '-'
 # Sets the powerline color scheme
 set -g theme_color_scheme dracula
 
-# plugins
-fundle plugin 'oh-my-fish/theme-bobthefish'
-fundle init
