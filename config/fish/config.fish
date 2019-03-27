@@ -17,13 +17,15 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "(pgrep gpg-agent)"
     export GPG_AGENT_INFO
     set GPG_TTY (tty)
     export GPG_TTY
-else
-    eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
+# else
+#     eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
 end
 
 # Set default version of Node
+set -x NVM_DIR ~/.nvm
 source ~/.config/fish/nvm-wrapper/nvm.fish
-nvm use --delete-prefix v$NODE_VERSION --silent
+nvm use --silent 8.15.1
+# nvm use --delete-prefix v$NODE_VERSION --silent
 
 # Set default version of Ruby
 source /usr/local/share/chruby/chruby.fish
@@ -58,3 +60,4 @@ set __fish_git_prompt_char_upstream_behind '-'
 # Sets the powerline color scheme
 set -g theme_color_scheme dracula
 
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
