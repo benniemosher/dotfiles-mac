@@ -24,7 +24,7 @@ end
 # Set default version of Node
 set -x NVM_DIR ~/.nvm
 source ~/.config/fish/nvm-wrapper/nvm.fish
-nvm use --silent 8.15.1
+nvm use --silent $NODE_VERSION
 # nvm use --delete-prefix v$NODE_VERSION --silent
 
 # Set default version of Ruby
