@@ -23,3 +23,5 @@ curl https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim --o
 # VS Code
 # SEE: https://draculatheme.com/visual-studio-code/
 ```
+
+https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
