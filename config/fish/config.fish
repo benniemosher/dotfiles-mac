@@ -60,4 +60,8 @@ set __fish_git_prompt_char_upstream_behind '-'
 # Sets the powerline color scheme
 set -g theme_color_scheme dracula
 
+set -g theme_nerd_fonts yes
+set -g theme_powerline_fonts no
+set -g theme_display_ruby no
+
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
