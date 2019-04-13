@@ -22,7 +22,7 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "(pgrep gpg-agent)"
 end
 
 # Set default version of Node
-set -x NVM_DIR ~/.nvm
+set -gx NVM_DIR ~/.nvm
 source ~/.config/fish/nvm-wrapper/nvm.fish
 nvm use --silent $NODE_VERSION
 # nvm use --delete-prefix v$NODE_VERSION --silent
@@ -30,7 +30,6 @@ nvm use --silent $NODE_VERSION
 # Set default version of Ruby
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
-chruby $RUBY_VERSION
 
 # print the welcome banner
 fortune | cowsay -f dragon | lolcat

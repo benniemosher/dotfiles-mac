@@ -57,11 +57,10 @@ endif
 
 let g:one_allow_italics = 1
 let g:airline_theme='dracula'
-color dracula
 syntax on
 filetype plugin indent on
 
-set guifont=DroidSansMono\ Nerd\ Font:h13
+set guifont=DroidSansMono\ Nerd\ Font:h11
 
 let g:terraform_align=1
 let g:terraform_fmt_on_save = 1
@@ -71,6 +70,14 @@ let g:terraform_fmt_on_save = 1
 :command Wq wq
 :command W w
 :command Q q
+
+" Auto install vim-plug
+" SEE: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin()
   Plug 'ctrlpvim/ctrlp.vim'
