@@ -1,27 +1,70 @@
 # dotfiles-mac
 
-Cow files go into `/usr/local/Cellar/cowsay/3.04/share/cows/`
+## To Install:
 
-To Install:
+### Install homebrew
 
 ```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### Setup dotfiles
+
+```
+mkdir -p ~/Code/
+cd ~/Code/
+
+git clone git@github.com:benniemosher/dotfiles.git
+
+brew bundle --file=~/Code/dotfiles/Brewfile
+
 cd ~
-curl https://raw.githubusercontent.com/passcod/nvm-fish-wrapper/master/nvm.fish --output ~/Code/dotfiles/config/fish/nvm-wrapper/nvm.fish
-rcup -v -x README.md -x .gitignore -d ~/Code/dotfiles
+
+rcup -v -d ~/Code/dotfiles -x .git -x README.md -x .gitignore -x bin -x Brewfile
 ```
 
-Colorschemes:
+### Setup Github SSH Key
 
 ```
-# iTerm:
-mkdir -p colors/iterm
-curl --create-dirs https://raw.githubusercontent.com/dracula/iterm/master/Dracula.itermcolors --output colors/iterm/Dracula.itermcolors
-
-# VIM:
-curl --create-dirs  https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim --output vim/colors/dracula.vim
-
-# VS Code
-# SEE: https://draculatheme.com/visual-studio-code/
+# SEE: https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+# SEE: https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account
 ```
 
-https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
+### Install NVM
+
+```
+mkdir ~/.nvm
+ln -s (brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
+
+git clone git://github.com/passcod/nvm-fish-wrapper.git ~/.config/fish/nvm-wrapper
+
+nvm install $NODE_VERSION
+```
+
+### Install chruby and ruby-install
+
+```
+ruby-install ruby $RUBY_VERSION
+```
+
+### Install GPG and Keybase keys
+
+```
+keybase login
+chmod 700 ~/.gnupg
+keybase pgp list
+keybase pgp export -q <ID_FROM_ABOVE> | gpg --import
+keybase pgp export -q <ID_FROM_ABOVE> --secret | gpg --allow-secret-key-import --import
+```
+
+### Copy cowfiles
+
+```
+ln -s cowfiles/* /usr/local/Cellar/cowsay/3.04/share/cows/
+```
+
+### Setup Mac defaults
+
+```
+~/Code/dotfiles/bin/macos
+```
