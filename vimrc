@@ -20,7 +20,7 @@ set scrolloff=4                 " Keep at least 4 lines below cursor
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+let g:ctrlp_use_caching = 1
 let g:ctrlp_working_path_mode = 'ra'
 
 " RSpec.vim mappings
