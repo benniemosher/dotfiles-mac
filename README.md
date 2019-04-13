@@ -15,10 +15,10 @@ Colorschemes:
 ```
 # iTerm:
 mkdir -p colors/iterm
-curl https://raw.githubusercontent.com/dracula/iterm/master/Dracula.itermcolors --output colors/iterm/Dracula.itermcolors
+curl --create-dirs https://raw.githubusercontent.com/dracula/iterm/master/Dracula.itermcolors --output colors/iterm/Dracula.itermcolors
 
 # VIM:
-curl https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim --output vim/colors/dracula.vim
+curl --create-dirs  https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim --output vim/colors/dracula.vim
 
 # VS Code
 # SEE: https://draculatheme.com/visual-studio-code/
