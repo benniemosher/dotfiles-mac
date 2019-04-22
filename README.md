@@ -23,6 +23,14 @@ cd ~
 rcup -v -d ~/Code/dotfiles -x .git -x README.md -x .gitignore -x bin -x Brewfile
 ```
 
+### Setup fish shell
+
+```
+vim /etc/shells # Append /usr/local/bin/fish
+
+chsh -s /usr/local/bin/fish
+```
+
 ### Setup Github SSH Key
 
 ```
