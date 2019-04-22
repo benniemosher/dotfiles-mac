@@ -8,6 +8,13 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+### Setup Github SSH Key
+
+```
+# SEE: https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+# SEE: https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account
+```
+
 ### Setup dotfiles
 
 ```
@@ -29,13 +36,10 @@ rcup -v -d ~/Code/dotfiles -x .git -x README.md -x .gitignore -x bin -x Brewfile
 vim /etc/shells # Append /usr/local/bin/fish
 
 chsh -s /usr/local/bin/fish
-```
 
-### Setup Github SSH Key
+# Close and open iTerm
 
-```
-# SEE: https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-# SEE: https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account
+fundle install
 ```
 
 ### Install NVM
