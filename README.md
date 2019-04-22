@@ -80,3 +80,9 @@ ln -s cowfiles/* /usr/local/Cellar/cowsay/3.04/share/cows/
 ```
 ~/Code/dotfiles/bin/macos
 ```
+
+### Setup postgres
+
+```
+brew services start postgresql
+```
