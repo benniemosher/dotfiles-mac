@@ -64,3 +64,5 @@ set -g theme_powerline_fonts no
 set -g theme_display_ruby no
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+set -gx GREP_OPTIONS '--color=auto --exclude=*.terraform --exclude-dir=*.git'
