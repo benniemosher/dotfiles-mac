@@ -71,6 +71,10 @@ let g:terraform_fmt_on_save = 1
 :command W w
 :command Q q
 
+autocmd BufRead,BufNewFile * setlocal spell
+autocmd FileType gitcommit setlocal spell
+set complete+=kspell
+
 " Auto install vim-plug
 " SEE: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
