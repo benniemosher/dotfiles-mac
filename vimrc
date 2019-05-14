@@ -95,4 +95,5 @@ call plug#begin()
   Plug 'hashivim/vim-terraform'
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'vim-scripts/fish-syntax'
+  Plug 'mtth/scratch.vim'
 call plug#end()
