@@ -96,4 +96,5 @@ call plug#begin()
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'vim-scripts/fish-syntax'
   Plug 'mtth/scratch.vim'
+  Plug 'fatih/vim-go'
 call plug#end()
