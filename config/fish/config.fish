@@ -5,6 +5,7 @@ end
 
 # plugins
 fundle plugin 'oh-my-fish/theme-bobthefish'
+fundle plugin 'evanlucas/fish-kubectl-completions'
 fundle init
 
 # Import local fish config (mostly used for local env vars)
