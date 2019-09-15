@@ -25,12 +25,17 @@ end
 # Set default version of Node
 set -gx NVM_DIR ~/.nvm
 source ~/.config/fish/nvm-wrapper/nvm.fish
-nvm use --silent $NODE_VERSION
+# nvm use --silent $NODE_VERSION
 # nvm use --delete-prefix v$NODE_VERSION --silent
 
 # Set default version of Ruby
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
+chruby 2.6.3
+
+# Set default golang path
+set -x -U GOPATH $HOME/Code/go
+set -xg PATH $PATH $HOME/Code/go/bin
 
 # print the welcome banner
 fortune | cowsay -f dragon | lolcat
@@ -61,8 +66,8 @@ set __fish_git_prompt_char_upstream_behind '-'
 set -g theme_color_scheme dracula
 
 set -g theme_nerd_fonts yes
-set -g theme_powerline_fonts no
-set -g theme_display_ruby no
+set -g theme_powerline_fonts yes
+set -g theme_display_ruby yes
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
