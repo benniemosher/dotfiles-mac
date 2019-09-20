@@ -86,3 +86,8 @@ ln -s cowfiles/* /usr/local/Cellar/cowsay/3.04/share/cows/
 ```
 brew services start postgresql
 ```
+
+### Setup VSCode settings sync
+```
+SEE: https://mikefrobbins.com/2019/03/21/backup-and-synchronize-vscode-settings-with-a-github-gist/#targetText=In%20VSCode%2C%20press%20F1%20or,Ctrl%20%2B%20Shift%20%2B%20P).
+```
