@@ -1,5 +1,5 @@
 set -gx NODE_VERSION --lts
-set -gx RUBY_VERSION --latest
+set -gx RUBY_VERSION 2.6.2
 
 set -gx AWS_DEFAULT_PROFILE mfa
 set -gx AWS_PROFILE mfa

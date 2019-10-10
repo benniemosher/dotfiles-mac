@@ -31,7 +31,7 @@ source ~/.config/fish/nvm-wrapper/nvm.fish
 # Set default version of Ruby
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
-chruby 2.6.3
+chruby $RUBY_VERSION
 
 # Set default golang path
 set -x -U GOPATH $HOME/Code/go
