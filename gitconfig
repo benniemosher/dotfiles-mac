@@ -25,3 +25,6 @@
 	required = true
 [gpg]
 	program = /usr/local/bin/gpg
+
+[includeIf "gitdir:~/Code/oddball/"]
+    path = ~/Code/oddball/.gitconfig
