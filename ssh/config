@@ -1,3 +1,5 @@
+Include local.config
+
 Host *
  AddKeysToAgent yes
  UseKeychain yes
