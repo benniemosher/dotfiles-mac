@@ -22,8 +22,8 @@ yabai -m config --space 2 layout bsp
 #application settings
 # yabai -m rule --add app="^zoom" space=2 manage=on
 # yabai -m rule --add app=Mail space=2 manage=on
-yabai -m rule --add app=VSCode space=1 manage=on
-yabai -m rule --add app=Brave space=1 manage=on
-yabai -m rule --add app=iTerm space=1 manage=on
+yabai -m rule --add app="Code - Insiders" space=2 manage=on
+yabai -m rule --add app="Brave Browser" space=2 manage=on
+yabai -m rule --add app="iTerm2" space=2 manage=on
 
 echo "yabai configuration loaded.."
