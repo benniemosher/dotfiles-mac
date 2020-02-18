@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # general space settings
-yabai -m config layout bsp
+yabai -m config layout float
 yabai -m config top_padding 20
 yabai -m config bottom_padding 20
 yabai -m config left_padding 20
@@ -16,7 +16,14 @@ yabai -m config window_opacity on
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.9
 
+yabai -m config --space 1 layout float
+yabai -m config --space 2 layout bsp
+
 #application settings
-yabai -m rule --add app="^zoom" manage=off
+# yabai -m rule --add app="^zoom" space=2 manage=on
+# yabai -m rule --add app=Mail space=2 manage=on
+yabai -m rule --add app=VSCode space=1 manage=on
+yabai -m rule --add app=Brave space=1 manage=on
+yabai -m rule --add app=iTerm space=1 manage=on
 
 echo "yabai configuration loaded.."
