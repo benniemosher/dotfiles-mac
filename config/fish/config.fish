@@ -31,7 +31,7 @@ source ~/.config/fish/nvm-wrapper/nvm.fish
 # Set default version of Ruby
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
-chruby $RUBY_VERSION
+# chruby $RUBY_VERSION
 
 # Set default golang path
 set -x -U GOPATH $HOME/Code/go
@@ -72,3 +72,6 @@ set -g theme_display_ruby yes
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 set -gx GREP_OPTIONS '--color=auto --exclude=*.terraform --exclude-dir=*.git'
+
+eval (python3 -m virtualfish)
+

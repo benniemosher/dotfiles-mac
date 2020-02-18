@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+# general space settings
+yabai -m config layout bsp
+yabai -m config top_padding 20
+yabai -m config bottom_padding 20
+yabai -m config left_padding 20
+yabai -m config right_padding 20
+yabai -m config window_gap 20
+
+# shadow settings
+yabai -m config window_shadow float
+
+# window opacity
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.9
+
+#application settings
+yabai -m rule --add app="^zoom" manage=off
+
+echo "yabai configuration loaded.."
