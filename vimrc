@@ -83,6 +83,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" colorscheme nord
+
 call plug#begin()
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tpope/vim-surround'
@@ -97,4 +99,5 @@ call plug#begin()
   Plug 'vim-scripts/fish-syntax'
   Plug 'mtth/scratch.vim'
   Plug 'fatih/vim-go'
+  Plug 'arcticicestudio/nord-vim'
 call plug#end()
