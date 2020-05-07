@@ -56,7 +56,7 @@ if (empty($TMUX))
 endif
 
 let g:one_allow_italics = 1
-let g:airline_theme='dracula'
+let g:airline_theme='nord'
 syntax on
 filetype plugin indent on
 
@@ -83,9 +83,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" colorscheme nord
-
 call plug#begin()
+  Plug 'arcticicestudio/nord-vim', { 'as': 'nord' }
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-repeat'
@@ -99,5 +98,6 @@ call plug#begin()
   Plug 'vim-scripts/fish-syntax'
   Plug 'mtth/scratch.vim'
   Plug 'fatih/vim-go'
-  Plug 'arcticicestudio/nord-vim'
 call plug#end()
+
+colorscheme nord
