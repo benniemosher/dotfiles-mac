@@ -5,7 +5,6 @@ end
 
 # plugins
 fundle plugin 'oh-my-fish/theme-bobthefish'
-fundle plugin 'evanlucas/fish-kubectl-completions'
 fundle init
 
 # Import local fish config (mostly used for local env vars)
@@ -18,8 +17,6 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "(pgrep gpg-agent)"
     export GPG_AGENT_INFO
     set GPG_TTY (tty)
     export GPG_TTY
-# else
-#     eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
 end
 
 # Set default version of Node
@@ -41,12 +38,20 @@ set -xg PATH $PATH $HOME/Code/go/bin
 fortune | cowsay -f dragon | lolcat
 
 # Set bobthefish theme settings for git
-set -g theme_display_git yes
-set -g theme_display_git_dirty yes
-set -g theme_display_git_untracked yes
 set -g theme_display_git_ahead_verbose yes
 set -g theme_display_git_dirty_verbose yes
 set -g theme_display_git_master_branch yes
+set -g theme_display_git yes
+set -g theme_display_git_dirty yes
+set -g theme_display_git_untracked yes
+set -g theme_display_nvm no
+set -g theme_nerd_fonts yes
+set -g theme_powerline_fonts no
+set -g theme_display_ruby no
+set -g theme_display_virtualenv no
+
+set -g theme_date_format "+%a %H:%M"
+set -g theme_date_timezone America/Denver
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -63,15 +68,11 @@ set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
 
 # Sets the powerline color scheme
-set -g theme_color_scheme dracula
-
-set -g theme_nerd_fonts yes
-set -g theme_powerline_fonts yes
-set -g theme_display_ruby yes
+set -g theme_color_scheme nord
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 set -gx GREP_OPTIONS '--color=auto --exclude=*.terraform --exclude-dir=*.git'
 
-eval (python3 -m virtualfish)
+eval (python -m virtualfish)
 
