@@ -1,2 +1,0 @@
-set -gx NODE_VERSION v14
-set -gx RUBY_VERSION 2.6.6
