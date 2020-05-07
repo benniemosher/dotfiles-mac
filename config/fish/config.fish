@@ -50,7 +50,7 @@ set -g theme_powerline_fonts no
 set -g theme_display_ruby no
 set -g theme_display_virtualenv no
 
-set -g theme_date_format "+%a %H:%M"
+set -g theme_date_format "+%a %m/%d/%y %H:%M"
 set -g theme_date_timezone America/Denver
 
 # Fish git prompt
