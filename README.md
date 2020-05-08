@@ -30,16 +30,17 @@ cd ~
 rcup -v -d ~/Code/dotfiles -x .git -x README.md -x .gitignore -x bin -x Brewfile
 ```
 
-### Setup fish shell
+### Switch to zsh shell
 
 ```
-vim /etc/shells # Append /usr/local/bin/fish
+chsh -s $(which zsh)
+```
 
-chsh -s /usr/local/bin/fish
+### Install VIM plugins
+```
+vim ~
 
-# Close and open iTerm
-
-fundle install
+:PlugInstall
 ```
 
 ### Install NVM
@@ -48,15 +49,13 @@ fundle install
 mkdir ~/.nvm
 ln -s (brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
 
-git clone git://github.com/passcod/nvm-fish-wrapper.git ~/.config/fish/nvm-wrapper
-
-nvm install $NODE_VERSION
+nvm install node
 ```
 
 ### Install chruby and ruby-install
 
 ```
-ruby-install ruby $RUBY_VERSION
+ruby-install ruby
 ```
 
 ### Install GPG and Keybase keys
@@ -67,12 +66,6 @@ chmod 700 ~/.gnupg
 keybase pgp list
 keybase pgp export -q <ID_FROM_ABOVE> | gpg --import
 keybase pgp export -q <ID_FROM_ABOVE> --secret | gpg --allow-secret-key-import --import
-```
-
-### Copy cowfiles
-
-```
-ln -s cowfiles/* /usr/local/Cellar/cowsay/3.04/share/cows/
 ```
 
 ### Setup Mac defaults
