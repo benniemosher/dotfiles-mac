@@ -56,6 +56,7 @@ nvm install node
 
 ```
 ruby-install ruby
+chruby ruby
 ```
 
 ### Install GPG and Keybase keys
