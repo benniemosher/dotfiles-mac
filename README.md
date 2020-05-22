@@ -1,4 +1,4 @@
-# dotfiles-mac
+# 🍎 dotfiles-mac
 
 ## To Install:
 
