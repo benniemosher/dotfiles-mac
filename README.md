@@ -28,12 +28,14 @@ brew bundle --file=~/Code/dotfiles/Brewfile
 cd ~
 
 rcup -v -d ~/Code/dotfiles -x .git -x README.md -x .gitignore -x bin -x Brewfile
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### Switch to zsh shell
 
 ```
 chsh -s $(which zsh)
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 ### Install VIM plugins
@@ -47,7 +49,7 @@ vim ~
 
 ```
 mkdir ~/.nvm
-ln -s (brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
+ln -s $(brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
 
 nvm install node
 ```
@@ -56,6 +58,7 @@ nvm install node
 
 ```
 ruby-install ruby
+(start new terminal session)
 chruby ruby
 ```
 
@@ -73,15 +76,4 @@ keybase pgp export -q <ID_FROM_ABOVE> --secret | gpg --allow-secret-key-import -
 
 ```
 ~/Code/dotfiles/bin/macos
-```
-
-### Setup postgres
-
-```
-brew services start postgresql
-```
-
-### Setup VSCode settings sync
-```
-SEE: https://mikefrobbins.com/2019/03/21/backup-and-synchronize-vscode-settings-with-a-github-gist/#targetText=In%20VSCode%2C%20press%20F1%20or,Ctrl%20%2B%20Shift%20%2B%20P).
 ```
