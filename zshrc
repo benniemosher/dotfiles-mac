@@ -102,12 +102,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias be='bundle exec'
 alias brew-update='brew update; brew outdated; brew upgrade; brew cu --all --cleanup --yes; brew cleanup; brew doctor;'
-alias code='code-insiders'
 alias doco='docker-compose'
 alias ll='ls -al'
 alias tf='terraform'
+alias py='python3'
+alias pi='pip3'
 
 export PATH="/usr/local/sbin:$PATH"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 chruby ruby
 
@@ -137,3 +140,10 @@ load-nvmrc
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
+export WORKON_HOME=$HOME/.virtualenvs   # where virtual env are kept
+export PROJECT_HOME="$HOME/Code/safechain/safechain-api"        # where new project dir are created
+export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"  # interpreter used in virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
+export PATH="/usr/local/opt/v8@3.15/bin:$PATH"

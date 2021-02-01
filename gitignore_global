@@ -1,5 +1,4 @@
-*.DS_Store
-*.tfvars
+.DS_Store
 
 backend.tf
 
