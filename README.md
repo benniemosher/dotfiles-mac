@@ -38,6 +38,11 @@ chsh -s $(which zsh)
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
+### Download iTerm2 Colors
+```
+curl -o Nord.itermcolors https://raw.githubusercontent.com/arcticicestudio/nord-iterm2/master/src/xml/Nord.itermcolors
+```
+
 ### Install VIM plugins
 ```
 vim ~
