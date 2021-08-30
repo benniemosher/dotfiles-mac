@@ -4,20 +4,20 @@
 
 ### Install homebrew
 
-```
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ### Setup Github SSH Key
 
-```
+```bash
 # SEE: https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 # SEE: https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account
 ```
 
 ### Setup dotfiles
 
-```
+```bash
 mkdir -p ~/Code/
 cd ~/Code/
 
@@ -33,23 +33,22 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### Switch to zsh shell
 
-```
+```bash
 chsh -s $(which zsh)
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-### Download iTerm2 Colors
-```
-curl -o Nord.itermcolors https://raw.githubusercontent.com/arcticicestudio/nord-iterm2/master/src/xml/Nord.itermcolors
-```
+### Download Nord Colors
 
-### Download Terminal colors
-```
+```bash
+curl -o Nord.itermcolors https://raw.githubusercontent.com/arcticicestudio/nord-iterm2/master/src/xml/Nord.itermcolors
+
 curl -o Nord.terminal https://raw.githubusercontent.com/arcticicestudio/nord-terminal-app/master/src/xml/Nord.terminal
 ```
 
 ### Install VIM plugins
-```
+
+```bash
 vim ~
 
 :PlugInstall
@@ -57,7 +56,7 @@ vim ~
 
 ### Install NVM
 
-```
+```bash
 mkdir ~/.nvm
 ln -s $(brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
 
@@ -66,15 +65,17 @@ nvm install node
 
 ### Install chruby and ruby-install
 
-```
+```bash
 ruby-install ruby
 (start new terminal session)
 chruby ruby
+
+gem install artii
 ```
 
 ### Install GPG and Keybase keys
 
-```
+```bash
 keybase login
 chmod 700 ~/.gnupg
 keybase pgp list
@@ -84,6 +85,6 @@ keybase pgp export -q <ID_FROM_ABOVE> --secret | gpg --allow-secret-key-import -
 
 ### Setup Mac defaults
 
-```
+```bash
 ~/Code/dotfiles/bin/macos
 ```
