@@ -9,3 +9,4 @@ vim/colors/dracula.vim
 config/fish/nvm-wrapper/
 
 *.itermcolors
+*.Terminal
