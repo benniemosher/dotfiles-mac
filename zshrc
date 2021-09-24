@@ -142,11 +142,18 @@ load-nvmrc
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_VERSION="3.9.7"
+export PATH=$(pyenv root)/shims:$PATH
+eval "$(pyenv init -)"
+
 
 # export WORKON_HOME=$HOME/.virtualenvs   # where virtual env are kept
 # export PROJECT_HOME="$HOME/Code/"        # where new project dir are created
 # export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"  # interpreter used in virtualenv
 # source /usr/local/bin/virtualenvwrapper.sh
 # export PATH="/usr/local/opt/v8@3.15/bin:$PATH"
+
+alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
+alias awslabs="aws-vault exec stelligentlabs -- aws"
