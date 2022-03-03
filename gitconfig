@@ -25,6 +25,12 @@
 	process = git-lfs filter-process
 	required = true
 [gpg]
-	program = /usr/local/bin/gpg
-[includeIf "gitdir:~/Code/mp/"]
-  path = ~/Code/mp/.gitconfig-mp
+	program = /opt/homebrew/bin/gpg
+[includeIf "gitdir:~/Code/fundthatflip/"]
+ path = ~/Code/fundthatflip/.gitconfig-ftf
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
