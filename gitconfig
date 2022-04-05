@@ -26,11 +26,5 @@
 	required = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
-[includeIf "gitdir:~/Code/fundthatflip/"]
- path = ~/Code/fundthatflip/.gitconfig-ftf
-[credential "https://github.com"]
-	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
+[includeIf "gitdir:~/Code/FundThatFlip/"]
+ path = ~/Code/FundThatFlip/.gitconfig
