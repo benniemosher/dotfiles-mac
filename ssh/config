@@ -4,11 +4,10 @@ Host github.com
  IdentityFile ~/.ssh/id_ed25519
  IdentitiesOnly yes
 
-Host github-ftf.com
+Host ftf.github.com
   Hostname github.com
   User git
-  IdentityFile ~/.ssh/id_ed25519_fundthatflip
-  IdentitiesOnly yes
+  IdentityAgent ~/.1password/agent.sock
 
 Host *
   AddKeysToAgent yes
