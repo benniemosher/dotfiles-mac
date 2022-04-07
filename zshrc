@@ -157,6 +157,3 @@ eval "$(pyenv init -)"
 
 alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-
-# SEE: https://developer.1password.com/docs/ssh/get-started
-export SSH_AUTH_SOCK=~/.1password/agent.sock

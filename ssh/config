@@ -1,15 +1,13 @@
 Host github.com
- HostName github.com
- User git
- # IdentityFile ~/.ssh/id_ed25519
-
-Host ftf.github.com
   Hostname github.com
-  User git
-  # IdentityAgent ~/.1password/agent.sock
+  IdentityFile ~/.ssh/id_ed25519
+
+Host bam.github.com
+  Hostname github.com
+  IdentityFile ~/.ssh/bam_id_ed25519
 
 Host *
   AddKeysToAgent yes
   UseKeychain yes
-  # IdentityFile ~/.ssh/id_ed25519
-  IdentityAgent ~/.1password/agent.sock
+  User git
+  IdentityFile ~/.ssh/id_ed25519
