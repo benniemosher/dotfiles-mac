@@ -2,9 +2,9 @@ Host github.com
   Hostname github.com
   IdentityFile ~/.ssh/id_ed25519
 
-Host bam.github.com
+Host ftf.github.com
   Hostname github.com
-  IdentityFile ~/.ssh/bam_id_ed25519
+  IdentityFile ~/.ssh/ftf_id_ed25519
 
 Host *
   AddKeysToAgent yes

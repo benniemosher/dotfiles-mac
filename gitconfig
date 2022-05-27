@@ -6,6 +6,7 @@
 	s = status
 	co = checkout
 	cp = cherry-pick
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
 [credential]
 	helper = cache --timeout=3600
 [core]
@@ -26,5 +27,7 @@
 	required = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
-[includeIf "gitdir:~/Code/FundThatFlip/"]
- path = ~/Code/FundThatFlip/.gitconfig
+[includeIf "gitdir:/Users/benniemosher/Code/FundThatFlip/"]
+ path = /Users/benniemosher/Code/FundThatFlip/.gitconfig
+[includeIf "gitdir:/Users/benniemosher/Code/personal/"]
+ path = /Users/benniemosher/Code/personal/.gitconfig

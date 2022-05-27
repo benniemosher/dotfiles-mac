@@ -112,30 +112,30 @@ export PATH="/usr/local/sbin:$PATH"
 # source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 # source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-# chruby ruby
+chruby 2.7.6
 
 sh ~/Code/dotfiles/bin/motd.sh
 
 autoload -U add-zsh-hook
-# load-nvmrc() {
-#   local node_version="$(nvm version)"
-#   local nvmrc_path="$(nvm_find_nvmrc)"
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
 
-#   if [ -n "$nvmrc_path" ]; then
-#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-#     if [ "$nvmrc_node_version" = "N/A" ]; then
-#       nvm install
-#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#       nvm use
-#     fi
-#   elif [ "$node_version" != "$(nvm version default)" ]; then
-#     echo "Reverting to nvm default version"
-#     nvm use default
-#   fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -144,10 +144,9 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PYENV_VERSION="3.9.7"
+export PYENV_VERSION="3.10.3"
 export PATH=$(pyenv root)/shims:$PATH
 eval "$(pyenv init -)"
-
 
 # export WORKON_HOME=$HOME/.virtualenvs   # where virtual env are kept
 # export PROJECT_HOME="$HOME/Code/"        # where new project dir are created
@@ -157,3 +156,9 @@ eval "$(pyenv init -)"
 
 alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+# Created by `pipx` on 2022-04-25 15:41:19
+export PATH="$PATH:/Users/benniemosher/.local/bin"
+
+export AWS_DEFAULT_SSO_START_URL="https://fundthatflip.awsapps.com/start/"
+export AWS_DEFAULT_SSO_REGION="us-east-1"

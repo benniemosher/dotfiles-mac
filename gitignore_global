@@ -3,3 +3,5 @@
 backend.tf
 
 vendor/bundle
+
+.vscode
