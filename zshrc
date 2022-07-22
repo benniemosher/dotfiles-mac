@@ -112,7 +112,7 @@ export PATH="/usr/local/sbin:$PATH"
 # source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 # source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-chruby 2.7.6
+chruby ruby
 
 sh ~/Code/dotfiles/bin/motd.sh
 
@@ -162,3 +162,9 @@ export PATH="$PATH:/Users/benniemosher/.local/bin"
 
 export AWS_DEFAULT_SSO_START_URL="https://fundthatflip.awsapps.com/start/"
 export AWS_DEFAULT_SSO_REGION="us-east-1"
+
+# Created by `pipx` on 2022-06-13 14:27:58
+export PATH="$PATH:/Users/bam/.local/bin"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
