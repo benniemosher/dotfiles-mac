@@ -5,3 +5,7 @@ backend.tf
 vendor/bundle
 
 .vscode
+
+.pluralith
+
+generated

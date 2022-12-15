@@ -1,6 +1,6 @@
 [user]
 	name = Bennie Mosher
- email = benniemosher@gmail.com
+	email = 337539+benniemosher@users.noreply.github.com
 	signingkey = 21B7665760F5CAD38ED3E864AD538735446D633C
 [alias]
 	s = status
@@ -31,3 +31,5 @@
  path = /Users/benniemosher/Code/FundThatFlip/.gitconfig
 [includeIf "gitdir:/Users/benniemosher/Code/personal/"]
  path = /Users/benniemosher/Code/personal/.gitconfig
+[init]
+	defaultBranch = main
