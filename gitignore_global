@@ -1,11 +1,8 @@
 .DS_Store
-
-backend.tf
-
-vendor/bundle
-
-.vscode
-
 .pluralith
-
+.terraform
+.vscode
+backend.tf
 generated
+node_modules
+vendor/bundle

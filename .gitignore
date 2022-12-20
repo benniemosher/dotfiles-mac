@@ -1,12 +1,4 @@
 .DS_Store
-config/fish/local.config.fish
-
-aws/change_mfa.sh
-aws/config
-
-colors
-vim/colors/dracula.vim
-config/fish/nvm-wrapper/
 
 *.itermcolors
 *.Terminal

@@ -5,14 +5,14 @@
 ### Install homebrew
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ### Setup Github SSH Key
 
 ```bash
-# SEE: https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-# SEE: https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account
+brew install gh
+gh auth login
 ```
 
 ### Setup dotfiles
@@ -21,14 +21,14 @@
 mkdir -p ~/Code/
 cd ~/Code/
 
-git clone git@github.com:benniemosher/dotfiles.git
+gh repo clone benniemosher/dotfiles
 
 brew bundle --file=~/Code/dotfiles/Brewfile
 
 cd ~
 
-rcup -v -d ~/Code/dotfiles -x .git -x README.md -x .gitignore -x bin -x Brewfile
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+rcup -v -d ~/Code/dotfiles -x .git -x README.md -x .gitignore -x bin -x Brewfile -x Brewfile.lock.json
 ```
 
 ### Switch to zsh shell
@@ -41,6 +41,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ### Download Nord Colors
 
 ```bash
+# TODO: Set these in iTerm and Terminal applications
 curl -o Nord.itermcolors https://raw.githubusercontent.com/arcticicestudio/nord-iterm2/master/src/xml/Nord.itermcolors
 
 curl -o Nord.terminal https://raw.githubusercontent.com/arcticicestudio/nord-terminal-app/master/src/xml/Nord.terminal

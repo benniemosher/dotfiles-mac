@@ -1,7 +1,7 @@
 [user]
 	name = Bennie Mosher
 	email = 337539+benniemosher@users.noreply.github.com
-	signingkey = 21B7665760F5CAD38ED3E864AD538735446D633C
+	signingkey = /Users/bmosher/.ssh/id_ed25519.pub
 [alias]
 	s = status
 	co = checkout
@@ -26,10 +26,7 @@
 	process = git-lfs filter-process
 	required = true
 [gpg]
-	program = /opt/homebrew/bin/gpg
-[includeIf "gitdir:/Users/benniemosher/Code/FundThatFlip/"]
- path = /Users/benniemosher/Code/FundThatFlip/.gitconfig
-[includeIf "gitdir:/Users/benniemosher/Code/personal/"]
- path = /Users/benniemosher/Code/personal/.gitconfig
+	program = gpg
+	format = ssh
 [init]
 	defaultBranch = main
