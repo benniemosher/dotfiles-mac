@@ -24,9 +24,12 @@ cd ~/Code/
 gh repo clone benniemosher/dotfiles
 
 brew bundle --file=~/Code/dotfiles/Brewfile
+```
 
+### Install oh-my-zsh
+
+```bash
 cd ~
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rcup -v -d ~/Code/dotfiles -x .git -x README.md -x .gitignore -x bin -x Brewfile -x Brewfile.lock.json
 ```
@@ -53,25 +56,6 @@ curl -o Nord.terminal https://raw.githubusercontent.com/arcticicestudio/nord-ter
 vim ~
 
 :PlugInstall
-```
-
-### Install NVM
-
-```bash
-mkdir ~/.nvm
-ln -s $(brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
-
-nvm install node
-```
-
-### Install chruby and ruby-install
-
-```bash
-ruby-install ruby
-(start new terminal session)
-chruby ruby
-
-gem install artii
 ```
 
 ### Install GPG and Keybase keys
