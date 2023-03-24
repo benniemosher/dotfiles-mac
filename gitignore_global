@@ -6,3 +6,4 @@ backend.tf
 generated
 node_modules
 vendor/bundle
+.infracost

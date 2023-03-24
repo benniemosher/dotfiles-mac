@@ -1,6 +1,7 @@
 [user]
 	name = Bennie Mosher
-	email = 337539+benniemosher@users.noreply.github.com
+	; email = 337539+benniemosher@users.noreply.github.com
+ email = bmosher@researchinnovations.com
 	signingkey = /Users/bmosher/.ssh/id_ed25519.pub
 [alias]
 	s = status
@@ -32,3 +33,5 @@
 	defaultBranch = main
 [safe]
 	directory = /opt/homebrew
+[includeIf "gitdir:/Users/bmosher/Code/rii"]
+ path = /Users/bmosher/Code/rii/.gitconfig
