@@ -117,3 +117,16 @@ sh ~/Code/dotfiles/bin/motd.sh
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 export GPG_TTY=$(tty)
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+else
+    print "404: ~/.zshrc.local not found."
+fi
