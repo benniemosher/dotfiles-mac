@@ -2,8 +2,10 @@
 .pluralith
 .terraform
 .vscode
-backend.tf
+/* backend.tf */
 generated
 node_modules
 vendor/bundle
+*.pem
 .infracost
+*.crt
